@@ -34,7 +34,7 @@ In my cloned project labs folder I needed to expose my projects directory by usi
 $ java -jar tools/venus.jar . -dm
 ```
 
-![javalinLogo](/images/risc/riscv1.png)
+![javalinLogo](images/risc/riscv1.png)
 
 Now if I open Venus on my local web browser, I can now see the web terminal and we can mount our local machines project folder to this website. This way if we apply any changes in either place, the changes will replicate respectively.
 
