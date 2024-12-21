@@ -1,6 +1,6 @@
 ---
 title: "kmdfHelloWorldDriver"
-excerpt: "This project involved creating a Universal Windows driver using the Kernel-Mode Driver Framework (KMDF), deploying it to a Hyper-V virtual machine, and debugging it with WinDbg. I gained hands-on experience with driver deployment, kernel debugging, and system-level interactions.<br/><img src='/images/exampleDriverCode.png'>"
+excerpt: "This project involved creating a Universal Windows driver using the Kernel-Mode Driver Framework (KMDF), deploying it to a Hyper-V virtual machine, and debugging it with WinDbg. I gained hands-on experience with driver deployment, kernel debugging, and system-level interactions.<br/><img src='exampleDriverCode.png'>"
 collection: portfolio
 ---
 
