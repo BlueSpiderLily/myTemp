@@ -1,6 +1,6 @@
 ---
 title: "CS61C Lab 3 (RISC-V Venus)"
-excerpt: "This project will involve setting up and becoming familiar with Venus, the RISC-V simulator, while also learning the basics of the RISC-V assembly language, registers, memory access, and debugging. Using this lab I was able to understand how to write, execute, and troubleshoot simple RISC-V programs.<br/><img src='/risc/riscv1.png'>"
+excerpt: "This project will involve setting up and becoming familiar with Venus, the RISC-V simulator, while also learning the basics of the RISC-V assembly language, registers, memory access, and debugging. Using this lab I was able to understand how to write, execute, and troubleshoot simple RISC-V programs.<br/><img src='/risc/riscv1.PNG'>"
 collection: portfolio
 ---
 December 2024
@@ -44,13 +44,13 @@ We can do this by performing the command in our Venus terminal:
 $ mount local labs
 ```
 
-![](/images/risc/riscv2.png)
+![](/images/risc/riscv2.PNG)
 
 As we can see it asks for an authentication key which we can see in our local machines terminal. Successfully providing this key to Venus will then link our files like we wish.
 
 Navigating to our files tab, we can now see the success.
 
-![](/images/risc/riscv3.png)
+![](/images/risc/riscv3.PNG)
 
 Now we're ready to really get to the fun!
 
@@ -63,60 +63,60 @@ We will do so here,
 
 First though, we must open the respective file, "fib.s" in our project folder.
   + Question 1: What is the machine code of the highlighted instruction? The answer should be a 32 bit hexadecimal number, with the 0x prefix.
-  ![](/images/risc/riscv4.png)
+  ![](/images/risc/riscv4.PNG)
   >0x000002B3
 
   + Question 2: What is the machine code of the instruction at address 0x34? The answer should be a 32 bit hexadecimal number, with the 0x prefix.
-  ![](/images/risc/riscv5.png)
+  ![](/images/risc/riscv5.PNG)
   >0x00000073
 
 On the right side of our screen we also have a "registers" tab, which we can use to see all 32 bit registers.
   + Question 3: What is the value of the sp register? The answer should be a 32 bit hexadecimal number, with the 0x prefix.
-  ![](/images/risc/riscv6.png)
+  ![](/images/risc/riscv6.PNG)
   >0x7FFFFFE0
 
 We're asked to continue stepping until the value in the register 't1' changes. Our initial value is:
-  ![](/images/risc/riscv7.png)
+  ![](/images/risc/riscv7.PNG)
   >0x00000000
 
 At offset 0x8 we see the change:
   + Question 4: What is the new value of the t1 register? The answer should be a 32 bit hexadecimal number, with the 0x prefix.
-  ![](/images/risc/riscv8.png)
+  ![](/images/risc/riscv8.PNG)
   >0x00000001
 
 It's also asking for the machine code of the current instruction:
   + Question 5: What is the machine code of the current instruction? The answer should be a 32 bit hexadecimal number, with the 0x prefix.
-  ![](/images/risc/riscv9.png)
+  ![](/images/risc/riscv9.PNG)
   >0x10000E17
 
 Stepping until offset 0x10, we're then asked:
   + Question 6: What is the value of the t3 register? The answer should be a 32 bit hexadecimal number, with the 0x prefix.
-  ![](/images/risc/riscv10.png)
+  ![](/images/risc/riscv10.PNG)
   >0x10000000
 
 We're also asked what it points to, and we can see this instruction says "lw x28 0(x28)", the 0(x28) is key to me showing a dereference of an address. So lets take its address and find what it points to.
   + Question 7: What is the byte that t3 points to? The answer should be an 8 bit (1 byte) hexadecimal number, with the 0x prefix.
-  ![](/images/risc/riscv11.png)
+  ![](/images/risc/riscv11.PNG)
   >0C
 
 Next, we're asked to set a breakpoint on offset 0x28, and find the value in the t0 register.
   + Question 8: What is the value of the t0 register? The answer should be a 32 bit hexadecimal number, with the 0x prefix.
-  ![](/images/risc/riscv12.png)
+  ![](/images/risc/riscv12.PNG)
   >0x00000001
 
 Stepping into the loops breakpoint six more times like asked, we need to find the new value of the t0 register.
   + Question 8: What is the value of the t0 register? The answer should be a 32 bit hexadecimal number, with the 0x prefix.
-  ![](/images/risc/riscv13.png)
+  ![](/images/risc/riscv13.PNG)
   >0x0000000D
 
 Now we're asked to change from hexadecimal and read the decimal value:
   + Question 10: What is the value of the t0 register in decimal? The answer should be a decimal number without a prefix.
-  ![](/images/risc/riscv14.png)
+  ![](/images/risc/riscv14.PNG)
   >13
 
 Running the program until it finishes we're lastly asked:
   + Question 11: What is the output of the program? The answer should be a decimal number without a prefix.
-  ![](/images/risc/riscv15.png)
+  ![](/images/risc/riscv15.PNG)
   >144
 
 # Exercise 3: Using Memcheck
@@ -132,7 +132,7 @@ We will answer the questions again, here.
 First things first, we need to open ex3_memcheck.s in our Venus online editor and get a general idea of it's behavior.
 After running the program, it looks like we're running into an error message, and asked to:
   + Question 1: What address did the program try to access, but caused the error? The answer should be a 32 bit hexadecimal number, with the 0x prefix.
-  ![](/images/risc/riscv16.png)
+  ![](/images/risc/riscv16.PNG)
   >0x10008058
 
 We're also asked:
@@ -141,7 +141,7 @@ We're also asked:
 
 Seeming like a memory error, we go ahead and turn on memcheck in Venus editor to get more details.
   + Question 3: What address did the program try to access, but caused the error? The answer should be a 32 bit hexadecimal number, with the 0x prefix.
-  ![](/images/risc/riscv17.png)
+  ![](/images/risc/riscv17.PNG)
   >0x10008080
 
   + Question 4: How many bytes were allocated in the block related to the error? The answer should be a number without units.
@@ -152,7 +152,7 @@ Seeming like a memory error, we go ahead and turn on memcheck in Venus editor to
 
 Trying to debug this error and recalling that register t1 contains the loop counter we're asked:
   + Question 6: What is the value of t1 based on the memcheck error message? The answer should be a decimal number.
-  ![](/images/risc/riscv18.png)
+  ![](/images/risc/riscv18.PNG)
   >11
 
 We're asked to fix this error in the source code, and we know it was on line 18 so, lets try and find the bad actor:
@@ -234,12 +234,12 @@ We're asked to fix this error in the source code, and we know it was on line 18 
 
 After running our program again, we're asked:
   + Question 7: How many bytes were not freed when the program exited? The answer should be a decimal number without units.
-  ![](/images/risc/riscv19.png)
+  ![](/images/risc/riscv19.PNG)
   >40
 
 Now we're asked to run memcheck in verbose mode:
   + Question 8: What is the address of the block that was not freed? The answer should be a 32 bit hexadecimal number, with the 0x prefix.
-  ![](/images/risc/riscv20.png)
+  ![](/images/risc/riscv20.PNG)
   >0x10008030 is the starting address of this memory blocks
 
 We're asked to fix This
@@ -322,7 +322,7 @@ We're asked to fix This
 </details><br>
 
 This gives our code a successful run and zero bytes of memory in use at exit:
-![](/images/risc/riscv21.png)
+![](/images/risc/riscv21.PNG)
 
 # Exercise 4: Array Practice
 
@@ -640,5 +640,5 @@ Explanation:
 >Essentially, this exercise tailored me to learn about a base case, if n = 0 we just return 1. Otherwise we needed to create a loop in risc-v to continiously multiply n by (n-1) by (n-2) until our n reached zero, breaking out of the loop; giving us n!. Again, each of my thought processes are again explained in the comments of the code.
 
 Testing 8!
-![](/images/risc/riscv22.png)
+![](/images/risc/riscv22.PNG)
 >40320 :)
