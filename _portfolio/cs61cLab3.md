@@ -1,6 +1,6 @@
 ---
 title: "CS61C Lab 3 (RISC-V Venus)"
-excerpt: "This project will involve setting up and becoming familiar with Venus, the RISC-V simulator, while also learning the basics of the RISC-V assembly language, registers, memory access, and debugging. Using this lab I was able to understand how to write, execute, and troubleshoot simple RISC-V programs.<br/><img src='/risc/riscv1.PNG'>"
+excerpt: "This project will involve setting up and becoming familiar with Venus, the RISC-V simulator, while also learning the basics of the RISC-V assembly language, registers, memory access, and debugging. Using this lab I was able to understand how to write, execute, and troubleshoot simple RISC-V programs.<br/><img src='https://raw.githubusercontent.com/BlueSpiderLily/myTemp/refs/heads/master/images/risc/riscv1.PNG'>"
 collection: portfolio
 ---
 December 2024
@@ -34,7 +34,7 @@ In my cloned project labs folder I needed to expose my projects directory by usi
 $ java -jar tools/venus.jar . -dm
 ```
 
-![javalinLogo](/images/risc/riscv1.PNG)
+![javalinLogo](https://raw.githubusercontent.com/BlueSpiderLily/myTemp/refs/heads/master/images/risc/riscv1.PNG)
 
 Now if I open Venus on my local web browser, I can now see the web terminal and we can mount our local machines project folder to this website. This way if we apply any changes in either place, the changes will replicate respectively.
 
