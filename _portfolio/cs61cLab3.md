@@ -1,6 +1,6 @@
 ---
 title: "CS61C Lab 3 (RISC-V Venus)"
-excerpt: "This project will involve setting up and becoming familiar with Venus, the RISC-V simulator, while also learning the basics of the RISC-V assembly language, registers, memory access, and debugging. Using this lab I was able to understand how to write, execute, and troubleshoot simple RISC-V programs.<br/><img src='risc/riscv1.png'>"
+excerpt: "This project will involve setting up and becoming familiar with Venus, the RISC-V simulator, while also learning the basics of the RISC-V assembly language, registers, memory access, and debugging. Using this lab I was able to understand how to write, execute, and troubleshoot simple RISC-V programs.<br/><img src='/risc/riscv1.png'>"
 collection: portfolio
 ---
 December 2024
